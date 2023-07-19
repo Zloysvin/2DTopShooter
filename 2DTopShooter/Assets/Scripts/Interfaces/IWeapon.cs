@@ -8,17 +8,20 @@ public interface IWeapon
 {
     string Name { get; set; }
     Transform GunPoint { get; set; }
-    Projectile Projectile { set; }
+    GameObject ProjectileObj { get; set; }
+    IProjectile Projectile { get; set; }
     public event EventHandler<ShootingEventArgs> OnShoot;
     public event EventHandler<EventArgs> OnReload; 
 
+    public float Damage { get; set; }
     public bool IsAutomatic { get; set; }
     public int AmmoClipSize { get; set; }
     public int CurrentAmmoInClip { get; set; }
     public int CurrentAmmo { get; set; }
     public int MaxAmmo { get; set; }
     public Sprite Ammo { get; set; }
-    public float ShootTime { set; }
+    public Sprite Weapon { get; set; }
+    public float ShootTime { get; set; }
     public float ReloadTime { get; set; }
     public float SpreadMultiplier { get; set; }
 

@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour, IDamagable
     [SerializeField] private TMP_Text _ammoText;
     [SerializeField] private TMP_Text _reload;
 
-    public GameObject[] Weapons;
+    public List<GameObject> Weapons;
     [field: SerializeField] public float HP { get; set; }
     [field: SerializeField] public float HPMax { get; set; }
     public event EventHandler<DamageTakenEventArgs> OnDamageTaken;
@@ -46,12 +46,12 @@ public class PlayerController : MonoBehaviour, IDamagable
         _ammoText.text = $"{_currentWeapon.CurrentAmmoInClip}/{_currentWeapon.CurrentAmmo - _currentWeapon.CurrentAmmoInClip}";
     }
 
-    private void PlayerController_OnReload(object sender, System.EventArgs e)
+    public void PlayerController_OnReload(object sender, System.EventArgs e)
     {
         StartCoroutine(ReloadAnimation(_currentWeapon.ReloadTime));
     }
 
-    private void PlayerController_OnShoot(object sender, ShootingEventArgs e)
+    public void PlayerController_OnShoot(object sender, ShootingEventArgs e)
     {
         _ammoText.text = $"{e.AmmoInClip}/{e.RestAmmo}";
     }
@@ -111,10 +111,10 @@ public class PlayerController : MonoBehaviour, IDamagable
 
     void SwapWeapons(int newIndex)
     {
-        if (newIndex >= Weapons.Length)
+        if (newIndex >= Weapons.Count)
             newIndex = 0;
         if(newIndex < 0)
-            newIndex = Weapons.Length - 1;
+            newIndex = Weapons.Count - 1;
 
         IWeapon weapon = Weapons[_selectedWeaponIndex].GetComponent<IWeapon>();
         if (weapon.Reloading || weapon.Shooting)

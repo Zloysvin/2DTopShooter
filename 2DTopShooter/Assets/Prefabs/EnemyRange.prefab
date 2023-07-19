@@ -131,7 +131,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 2
-  m_Acceleration: 8
+  m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 150
   m_StoppingDistance: 0
@@ -293,7 +293,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: EnemyGun
   <GunPoint>k__BackingField: {fileID: 1642877221992775416}
-  <Projectile>k__BackingField: {fileID: 8222616212000631273, guid: a947116268eefbc42b21eda3c8324534, type: 3}
+  <ProjectileObj>k__BackingField: {fileID: 8329952941303052656, guid: a947116268eefbc42b21eda3c8324534, type: 3}
+  <Damage>k__BackingField: 10
   <IsAutomatic>k__BackingField: 0
   <AmmoClipSize>k__BackingField: 999999
   <CurrentAmmoInClip>k__BackingField: 999999

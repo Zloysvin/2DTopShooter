@@ -151,6 +151,7 @@ MonoBehaviour:
   _lifeTime: 10
   _speed: 0.3
   _isPlayerBullet: 0
+  <SelfRef>k__BackingField: {fileID: 8329952941303052656}
 --- !u!96 &1013377010374214851
 TrailRenderer:
   serializedVersion: 2
