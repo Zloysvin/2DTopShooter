@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Crosshair : MonoBehaviour
 {
+
+    private RectTransform m_RectTransform;
     void Start()
     {
+        m_RectTransform = GetComponent<RectTransform>();
+
         // Hides the cursor...
         Cursor.visible = false;
     }
     void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        transform.position = mousePosition;
+        m_RectTransform.position = Input.mousePosition;
     }
 }

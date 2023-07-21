@@ -31,11 +31,15 @@ public class PlayerController : MonoBehaviour, IDamagable
 
     public event EventHandler<DeathEventArgs> OnDeath;
 
+    public int Points;
+    public TMP_Text Score;
+
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _camera = Camera.main;
         EquipWeapon();
+        UpdateScore();
 
         foreach (var weapon in Weapons)
         {
@@ -165,8 +169,19 @@ public class PlayerController : MonoBehaviour, IDamagable
 
         if (HP <= 0)
         {
-            OnDeath(this, new DeathEventArgs(false));
+            OnDeath(this, new DeathEventArgs(false, 0));
             Destroy(gameObject);
         }
+    }
+
+    public void UpdateScore()
+    {
+        Score.text = $"{Points} PTS";
+    }
+
+    public void UpdateScore(int addscr)
+    {
+        Points += addscr;
+        Score.text = $"{Points} PTS";
     }
 }

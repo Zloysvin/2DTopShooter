@@ -10,6 +10,7 @@ public class RangeEnemy : MonoBehaviour, IDamagable
     [field: SerializeField] public float HPMax { get; set; }
     public event EventHandler<DamageTakenEventArgs> OnDamageTaken;
     public event EventHandler<DeathEventArgs> OnDeath;
+    public int ScoreVal;
 
     private Transform _target;
     private NavMeshAgent _agent;
@@ -69,7 +70,7 @@ public class RangeEnemy : MonoBehaviour, IDamagable
 
         if (HP <= 0)
         {
-            OnDeath(this, new DeathEventArgs(isShootingPlayer));
+            OnDeath(this, new DeathEventArgs(isShootingPlayer, ScoreVal));
             Destroy(gameObject);
         }
     }

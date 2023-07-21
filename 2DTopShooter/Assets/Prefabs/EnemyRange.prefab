@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <HP>k__BackingField: 50
   <HPMax>k__BackingField: 50
+  ScoreVal: 1500
 --- !u!1 &6196552240767020562
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +302,7 @@ MonoBehaviour:
   <CurrentAmmo>k__BackingField: 999999
   <MaxAmmo>k__BackingField: 999999
   <Ammo>k__BackingField: {fileID: 0}
+  <Weapon>k__BackingField: {fileID: 0}
   <ShootTime>k__BackingField: 1
   <ReloadTime>k__BackingField: 0
   <SpreadMultiplier>k__BackingField: 0.73

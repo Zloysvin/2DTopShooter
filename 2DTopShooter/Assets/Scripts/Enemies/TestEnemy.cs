@@ -10,6 +10,7 @@ public class TestEnemy : MonoBehaviour, IDamagable
     [field: SerializeField] public float HPMax { get; set; }
     public event EventHandler<DamageTakenEventArgs> OnDamageTaken;
     public event EventHandler<DeathEventArgs> OnDeath;
+    public int ScoreVal;
 
     [SerializeField] private float _damage;
     [SerializeField] private float _attackDelay;
@@ -45,7 +46,7 @@ public class TestEnemy : MonoBehaviour, IDamagable
 
         if (HP <= 0)
         {
-            OnDeath(this, new DeathEventArgs(isShootingPlayer));
+            OnDeath(this, new DeathEventArgs(isShootingPlayer, ScoreVal));
             Destroy(gameObject);
         }
     }

@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private TMP_Text _killCountText;
 
     public int killCount;
+    public PlayerController Player;
 
     void Start()
     {
@@ -50,6 +51,7 @@ public class EnemySpawner : MonoBehaviour
         {
             killCount++;
             _killCountText.text = $"{killCount} X";
+            Player.UpdateScore(e.points);
         }
     }
 }

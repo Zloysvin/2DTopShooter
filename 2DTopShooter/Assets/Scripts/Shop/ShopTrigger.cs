@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class ShopTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject Shop;
+    public GameObject Prompt;
+
+    void OnTriggerStay2D(Collider2D other)
     {
-        
+        if (other.tag == "Player")
+        {
+            Prompt.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            Prompt.SetActive(false);
+        }
+    }
+
     void Update()
     {
-        
+        if(Prompt.activeSelf && Input.GetKeyDown(KeyCode.F))
+        {
+            Shop.SetActive(true);
+            Prompt.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 }

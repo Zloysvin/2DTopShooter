@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <HP>k__BackingField: 60
   <HPMax>k__BackingField: 65
+  ScoreVal: 2500
   _damage: 10
   _attackDelay: 0.8
 --- !u!50 &8556964307270282213

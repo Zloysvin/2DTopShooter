@@ -101,17 +101,17 @@ MonoBehaviour:
   <Name>k__BackingField: MachineGun
   <GunPoint>k__BackingField: {fileID: 4889783414323485450}
   <ProjectileObj>k__BackingField: {fileID: 8329952941303052656, guid: d19bd59a362f70540b7e771f60019692, type: 3}
-  <Damage>k__BackingField: 6
-  <IsAutomatic>k__BackingField: 0
+  <Damage>k__BackingField: 8
+  <IsAutomatic>k__BackingField: 1
   <AmmoClipSize>k__BackingField: 200
   <CurrentAmmoInClip>k__BackingField: 200
   <CurrentAmmo>k__BackingField: 1600
   <MaxAmmo>k__BackingField: 1600
   <Ammo>k__BackingField: {fileID: 21300000, guid: 4e1fc806975a1e64ebe34b845bb62085, type: 3}
   <Weapon>k__BackingField: {fileID: 21300000, guid: 9cadbc01b08add24292ee4ca3d6dbe53, type: 3}
-  <ShootTime>k__BackingField: 0.01
+  <ShootTime>k__BackingField: 0.1
   <ReloadTime>k__BackingField: 4
-  <SpreadMultiplier>k__BackingField: 2
+  <SpreadMultiplier>k__BackingField: 1.2
 --- !u!1 &4889783414323485451
 GameObject:
   m_ObjectHideFlags: 0

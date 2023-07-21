@@ -101,15 +101,15 @@ MonoBehaviour:
   <Name>k__BackingField: AutoGun
   <GunPoint>k__BackingField: {fileID: 4467418670382043225}
   <ProjectileObj>k__BackingField: {fileID: 8329952941303052656, guid: dde9b94b5a6143943a5a96dd6819b928, type: 3}
-  <Damage>k__BackingField: 8
+  <Damage>k__BackingField: 10
   <IsAutomatic>k__BackingField: 1
-  <AmmoClipSize>k__BackingField: 18
-  <CurrentAmmoInClip>k__BackingField: 18
+  <AmmoClipSize>k__BackingField: 15
+  <CurrentAmmoInClip>k__BackingField: 15
   <CurrentAmmo>k__BackingField: 100
   <MaxAmmo>k__BackingField: 100
   <Ammo>k__BackingField: {fileID: 21300000, guid: b51aea84b3bcd6a44a710035b1a2e3d7, type: 3}
   <Weapon>k__BackingField: {fileID: 21300000, guid: f79144d3e2b850940b016f10c321cdcf, type: 3}
-  <ShootTime>k__BackingField: 0.2
+  <ShootTime>k__BackingField: 0.1
   <ReloadTime>k__BackingField: 1.5
   <SpreadMultiplier>k__BackingField: 1
 --- !u!1 &4467418670382043224
